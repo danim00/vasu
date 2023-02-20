@@ -1,4 +1,4 @@
-package newPackage;
+package ui;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
@@ -13,9 +13,9 @@ import org.openqa.selenium.interactions.Actions;
 public class Right_click {
 
 	@SuppressWarnings("deprecation")
-	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C://directory//chromedriver.exe");
-
+	public static void main(String[] args) {
+	
+		
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.amazon.in/");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -31,8 +31,6 @@ public class Right_click {
 		driver.switchTo().window(tabs.get(1));
 
 		action.contextClick(rightclickelement).sendKeys(Keys.ARROW_DOWN).build().perform();
-		
-		
 		
 
 	}
